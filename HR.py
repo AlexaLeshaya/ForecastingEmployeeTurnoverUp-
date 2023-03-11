@@ -26,7 +26,7 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     
-    satisfaction_level=st.radio("Уровень удовлетворенности сотрудника:", 
+    satisfaction_level=st.radio("Уровень удовлетворенности сотрудника: (0.1 - совсем не удовлетворен и 1.0 - высшая степень удовлетворенности)", 
                key="satisfaction_level",
                options=["0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0"], )
     if satisfaction_level=="0.1":
@@ -50,7 +50,7 @@ def main():
     elif satisfaction_level=="1.0":
         satisfaction_level=1.0
        
-    last_evaluation=st.radio("Оценка работодателя:",
+    last_evaluation=st.radio("Оценка работодателя: (0.1 - совсем не доволен вами и 1.0 - очень доволен вами)",
                key="last_evaluation",
                options=["0.1","0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1.0"], )
     if last_evaluation=="0.1":
@@ -74,9 +74,9 @@ def main():
     elif last_evaluation=="1.0":
         last_evaluation=1.0
         
-    number_project = st.text_input("Количество выполняемых проектов","")
-    average_montly_hours = st.text_input("Среднее количество рабочих часов за месяц","")
-    time_spend_company = st.text_input("Время работы в компании в годах","")
+    number_project = st.text_input("Количество выполняемых проектов (от 2 до 7)","")
+    average_montly_hours = st.text_input("Среднее количество рабочих часов за месяц (от 96 до 310)","")
+    time_spend_company = st.text_input("Время работы в компании в годах (от 2 до 10)","")
     
     Work_accident=st.radio("Был ли несчастный случай на рабочем месте:",
                key="Work_accident",
